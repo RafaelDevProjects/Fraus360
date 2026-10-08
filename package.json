@@ -1,16 +1,17 @@
 {
   "name": "guardiao-mvp",
   "version": "0.1.0",
-  "private": true,
   "type": "module",
-  "description": "MVP do agente Guardiao (VID) no WhatsApp - analise de risco de links e fluxo de incidente de fraude de identidade",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node --watch server.js"
+    "dev": "node --watch server.js",
+    "test:llm": "node test-llm.js"
   },
+  "engines": { "node": ">=18" },
   "dependencies": {
-    "express": "^4.19.2",
-    "axios": "^1.7.2",
-    "dotenv": "^16.4.5"
+    "axios": "^1.7.0",
+    "dotenv": "^16.4.0",
+    "express": "^4.19.0"
   }
 }

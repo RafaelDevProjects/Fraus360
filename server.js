@@ -1,6 +1,5 @@
 import 'dotenv/config';
 import express from 'express';
-import { parseIncomingMessage } from './src/whatsapp.js';
 import { handleIncomingMessage } from './src/messageHandler.js';
 
 const app = express();
@@ -20,18 +19,22 @@ app.get('/webhook', (req, res) => {
 });
 
 // Toda mensagem recebida no WhatsApp chega aqui.
-app.post('/webhook', async (req, res) => {
+app.post('/webhook', (req, res) => {
   // Responde 200 imediatamente - a Meta reenvia o webhook se não receber
   // confirmação rápida, o que causaria mensagens duplicadas.
   res.sendStatus(200);
 
-  const message = parseIncomingMessage(req.body);
-  if (!message) return; // ex: notificação de status de entrega, não é mensagem de texto
+  for (const entry of req.body?.entry || []) {
+    for (const change of entry.changes || []) {
+      const messages = change.value?.messages;
+      if (!messages) continue; // ex: notificação de status de entrega (enviada/lida)
 
-  try {
-    await handleIncomingMessage(message);
-  } catch (err) {
-    console.error('Erro ao processar mensagem:', err);
+      for (const msg of messages) {
+        handleIncomingMessage(msg).catch((err) =>
+          console.error('Erro ao processar mensagem:', err)
+        );
+      }
+    }
   }
 });
 

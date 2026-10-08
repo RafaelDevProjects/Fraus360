@@ -1,16 +1,16 @@
-// services/whatsapp.js
+// src/whatsappSend.js (envio de mensagens; seu src/whatsapp.js continua intacto)
 // Envio de mensagens pela WhatsApp Cloud API. O token vem do .env,
 // então trocar o token = editar WHATSAPP_TOKEN e reiniciar o servidor.
 
 const GRAPH_VERSION = process.env.GRAPH_API_VERSION || 'v21.0';
 
-async function sendText(to, body) {
-  const url = `https://graph.facebook.com/${GRAPH_VERSION}/${process.env.WHATSAPP_PHONE_NUMBER_ID}/messages`;
+export async function sendText(to, body) {
+  const url = `https://graph.facebook.com/${GRAPH_VERSION}/${(process.env.WHATSAPP_PHONE_NUMBER_ID || process.env.PHONE_NUMBER_ID)}/messages`;
 
   const res = await fetch(url, {
     method: 'POST',
     headers: {
-      Authorization: `Bearer ${process.env.WHATSAPP_TOKEN}`,
+      Authorization: `Bearer ${(process.env.WHATSAPP_TOKEN || process.env.WHATSAPP_ACCESS_TOKEN)}`,
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
@@ -30,5 +30,3 @@ async function sendText(to, body) {
   }
   return res.json();
 }
-
-module.exports = { sendText };

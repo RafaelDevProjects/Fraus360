@@ -1,5 +1,8 @@
 import axios from 'axios';
 
+// Sem timeout, uma fonte lenta trava a resposta inteira. 8s por fonte.
+const http = axios.create({ timeout: 8000 });
+
 // Extrai a primeira URL de um texto, ou null se nao houver nenhuma.
 export function extractUrl(text) {
   const match = text.match(/https?:\/\/[^\s]+/i);
@@ -21,7 +24,7 @@ async function checkSafeBrowsing(url) {
   if (!key) return { fonte: 'safe_browsing', disponivel: false };
 
   try {
-    const { data } = await axios.post(
+    const { data } = await http.post(
       `https://safebrowsing.googleapis.com/v4/threatMatches:find?key=${key}`,
       {
         client: { clientId: 'guardiao-vid', clientVersion: '0.1' },
@@ -51,7 +54,7 @@ async function checkVirusTotal(url) {
   const headers = { 'x-apikey': key };
 
   try {
-    const { data } = await axios.get(`https://www.virustotal.com/api/v3/urls/${urlId}`, { headers });
+    const { data } = await http.get(`https://www.virustotal.com/api/v3/urls/${urlId}`, { headers });
     const stats = data?.data?.attributes?.last_analysis_stats;
     if (!stats) return { fonte: 'virustotal', disponivel: true, status: 'sem_dados' };
     const maliciosos = (stats.malicious || 0) + (stats.suspicious || 0);
@@ -60,7 +63,7 @@ async function checkVirusTotal(url) {
     if (err.response?.status === 404) {
       // Nunca analisado antes: envia para analise e informa que o resultado ainda nao esta pronto.
       try {
-        await axios.post(
+        await http.post(
           'https://www.virustotal.com/api/v3/urls',
           new URLSearchParams({ url }),
           { headers }
@@ -81,7 +84,7 @@ async function checkDomainAge(url) {
   if (!domain) return { fonte: 'rdap', disponivel: false };
 
   try {
-    const { data } = await axios.get(`https://rdap.org/domain/${domain}`, {
+    const { data } = await http.get(`https://rdap.org/domain/${domain}`, {
       validateStatus: (s) => s < 500,
     });
     const eventoRegistro = data?.events?.find((e) => e.eventAction === 'registration');
@@ -103,7 +106,7 @@ async function checkPhishTank(url) {
     const params = new URLSearchParams({ url, format: 'json' });
     if (process.env.PHISHTANK_APP_KEY) params.append('app_key', process.env.PHISHTANK_APP_KEY);
 
-    const { data } = await axios.post('https://checkurl.phishtank.com/checkurl/', params, {
+    const { data } = await http.post('https://checkurl.phishtank.com/checkurl/', params, {
       headers: { 'User-Agent': 'guardiao-vid/0.1' },
     });
     const resultado = data?.results;
