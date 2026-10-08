@@ -102,6 +102,23 @@ h2{font:800 clamp(34px,4vw,52px)/1.05 var(--display);letter-spacing:-.03em}
 .problem-card h3{font:700 24px/1.2 var(--display);letter-spacing:-.02em}
 .problem-card p{color:var(--muted)}
 
+/* market */
+.market{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink-2)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.stat{background:var(--ink-2);padding:32px;display:flex;flex-direction:column;gap:10px}
+.stat-n{font:800 clamp(40px,4.5vw,56px)/1 var(--display);letter-spacing:-.03em;color:var(--paper)}
+.stat-n::after{content:"";display:block;width:32px;height:3px;border-radius:2px;background:var(--brand);margin-top:16px}
+.stat-t{color:var(--muted)}
+.ref{display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:20px;margin-left:6px;padding:0 5px;border-radius:999px;border:1px solid var(--line-2);font-size:12px;font-weight:600;color:var(--brand-bright);text-decoration:none;vertical-align:2px}
+.ref:hover{border-color:var(--brand-bright)}
+.light .ref{color:var(--brand-deep);border-color:#C3CEE6}
+.light .ref:hover{border-color:var(--brand-deep)}
+.insight{margin-top:32px;border:1px solid var(--line-2);border-radius:20px;padding:28px 32px;font-size:19px;max-width:900px}
+.insight strong{color:var(--brand-bright)}
+.sources{border-top:1px solid var(--line);padding-top:28px;padding-bottom:40px}
+.sources h2{font:600 15px var(--body);color:var(--muted);letter-spacing:0;margin-bottom:12px}
+.sources ol{margin:0;padding-left:22px;color:var(--muted-2);font-size:14px;display:flex;flex-direction:column;gap:6px}
+
 /* steps */
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:24px}
 .step{background:#fff;border-radius:20px;padding:32px;display:flex;flex-direction:column;gap:14px}
@@ -208,6 +225,7 @@ footer{border-top:1px solid var(--line)}
       Fraus
     </a>
     <nav class="nav-links" aria-label="Principal">
+      <a href="#mercado">Por que o Fraus</a>
       <a href="#como-funciona">Como funciona</a>
       <a href="#cpf">Proteção do CPF</a>
       <a href="#simulacao">Teste agora</a>
@@ -224,7 +242,7 @@ footer{border-top:1px solid var(--line)}
 <section class="wrap hero" aria-labelledby="hero-title">
   <div class="hero-copy">
     <p class="pill"><span class="dot" aria-hidden="true"></span>Agente antifraude direto no WhatsApp</p>
-    <h1 id="hero-title">Recebeu algo estranho? Pergunta pro Fraus.</h1>
+    <h1 id="hero-title">Recebeu algo estranho? Pergunta pro Fraus antes de pagar.</h1>
     <p class="lead">Encaminhe a mensagem, o link, o print ou o boleto para o Fraus no WhatsApp. Em segundos ele te diz se tem cara de golpe — e por quê. E ainda fica de olho no seu CPF, avisando se alguém tentar usá-lo no seu lugar.</p>
     <div class="cta-row">
       <a href="#simulacao" class="btn btn-primary">Testar a simulação</a>
@@ -269,6 +287,46 @@ footer{border-top:1px solid var(--line)}
     <div class="problem-card">
       <h3>Ninguém para perguntar</h3>
       <p>Na hora da dúvida, nem sempre tem alguém de confiança por perto para dar uma segunda opinião.</p>
+    </div>
+  </div>
+</section>
+
+<!-- INTELIGÊNCIA DE MERCADO -->
+<section id="mercado" class="market" aria-labelledby="mercado-title">
+  <div class="wrap section">
+    <div class="section-head">
+      <p class="eyebrow">Por que o Fraus é necessário</p>
+      <h2 id="mercado-title">O golpe digital virou o crime que mais cresce no Brasil.</h2>
+      <p>Os números oficiais mostram um problema em escala nacional, que chega principalmente pelo celular e pelos aplicativos de mensagem.</p>
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <p class="stat-n">2,26 mi</p>
+        <p class="stat-t">casos de estelionato registrados no Brasil em 2025, cerca de 4 por minuto.<a href="#fontes" class="ref" aria-label="Fonte 1">1</a></p>
+      </div>
+      <div class="stat">
+        <p class="stat-n">+430%</p>
+        <p class="stat-t">de crescimento do estelionato desde 2018, impulsionado pelos golpes digitais.<a href="#fontes" class="ref" aria-label="Fonte 1">1</a></p>
+      </div>
+      <div class="stat">
+        <p class="stat-n">26,3 mi</p>
+        <p class="stat-t">de brasileiros foram vítimas de golpe pela internet ou pelo celular em 12 meses.<a href="#fontes" class="ref" aria-label="Fonte 2">2</a></p>
+      </div>
+      <div class="stat">
+        <p class="stat-n">84%</p>
+        <p class="stat-t">dos golpes e tentativas com dados pessoais abordaram a vítima por apps de mensagem, como o WhatsApp.<a href="#fontes" class="ref" aria-label="Fonte 3">3</a></p>
+      </div>
+      <div class="stat">
+        <p class="stat-n">R$ 10,1 bi</p>
+        <p class="stat-t">perdidos com golpes financeiros em 2024, alta de 17% sobre o ano anterior.<a href="#fontes" class="ref" aria-label="Fonte 4">4</a></p>
+      </div>
+      <div class="stat">
+        <p class="stat-n">2,2 s</p>
+        <p class="stat-t">é o intervalo entre uma tentativa de fraude e outra no país: 10,8 milhões só de janeiro a setembro de 2025.<a href="#fontes" class="ref" aria-label="Fonte 5">5</a></p>
+      </div>
+    </div>
+    <div class="insight">
+      <p><strong>A oportunidade:</strong> o brasileiro já usa o WhatsApp para tudo, e é por ele que o golpe chega. Bancos protegem a transação; quase ninguém protege o momento da dúvida, antes do Pix. O Fraus ocupa exatamente esse espaço, no canal onde o risco acontece.</p>
     </div>
   </div>
 </section>
@@ -393,6 +451,7 @@ footer{border-top:1px solid var(--line)}
         <p class="eyebrow">Proteção do CPF</p>
         <h2 id="cpf-title">Seu CPF também pode ser alvo. O Fraus fica de olho.</h2>
         <p>Com dados vazados, golpistas abrem contas, pedem empréstimos e fazem compras no nome de outras pessoas. Muitas vezes você só descobre quando a cobrança chega. O Fraus verifica fraudes ligadas ao seu CPF e te avisa no WhatsApp.</p>
+        <p>Não é um risco distante: em 2021, um megavazamento expôs CPF, nome e data de nascimento de 223 milhões de brasileiros.<a href="#fontes" class="ref" aria-label="Fonte 6">6</a></p>
       </div>
       <div class="cpf-list">
         <div class="cpf-item">
@@ -595,6 +654,17 @@ footer{border-top:1px solid var(--line)}
 </main>
 
 <footer>
+  <div class="wrap sources" id="fontes">
+    <h2>Fontes</h2>
+    <ol>
+      <li>Fórum Brasileiro de Segurança Pública, <a href="https://brasil61.com/n/anuario-de-seguranca-publica-brasil-registrou-mais-de-2-2-milhoes-de-casos-de-estelionato-em-2025-bras2616801">Anuário Brasileiro de Segurança Pública 2026</a> (dados de 2025), divulgado em julho de 2026.</li>
+      <li>Fórum Brasileiro de Segurança Pública, pesquisa de vitimização de março de 2026, população de 16 anos ou mais, <a href="https://brasil61.com/n/anuario-de-seguranca-publica-brasil-registrou-mais-de-2-2-milhoes-de-casos-de-estelionato-em-2025-bras2616801">via Brasil 61</a>.</li>
+      <li>Cetic.br/NIC.br, <a href="https://viva.com.br/tecnologia/golpes-por-mensagem-e-ligacao-afetam-28-milhoes-de-usuarios-brasileiros.html">Privacidade e Proteção de Dados Pessoais 2025</a>, usuários de internet de 16 anos ou mais.</li>
+      <li>Febraban, <a href="https://www.poder360.com.br/poder-economia/golpes-causaram-prejuizo-de-r-101-bi-em-2024-diz-febraban/">perdas com golpes e fraudes em 2024</a>, divulgado em março de 2025.</li>
+      <li>Serasa Experian, <a href="https://www.serasaexperian.com.br/sala-de-imprensa/prevencao-a-fraude/brasil-registrou-108-milhoes-de-tentativas-de-fraudes-ate-setembro-com-alta-de-286-aponta-serasa-experian/">Indicador de Tentativas de Fraude</a>, janeiro a setembro de 2025.</li>
+      <li>Polícia Federal e ANPD, <a href="https://tecnoblog.net/408646/policia-federal-investiga-vazamento-de-223-milhoes-de-cpfs/">investigação do vazamento de 223 milhões de CPFs</a>, 2021.</li>
+    </ol>
+  </div>
   <div class="wrap foot">
     <span><strong>Fraus</strong> · Um projeto Girafas · Startup One FIAP</span>
     <span>[CONTATO@SEUDOMINIO.COM.BR]</span>
