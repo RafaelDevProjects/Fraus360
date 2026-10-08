@@ -7,41 +7,41 @@
 <meta name="description" content="Recebeu algo estranho? Encaminhe para o Fraus no WhatsApp e descubra em segundos se tem cara de golpe.">
 <meta property="og:title" content="Fraus — Antifraude no WhatsApp">
 <meta property="og:description" content="Encaminhe a mensagem, o link ou o boleto para o Fraus e saiba se é golpe antes de pagar.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B8F25A' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6l8-3z'/%3E%3Cpath d='M8.5 12l2.5 2.5 4.5-5'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232F6BFF' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6l8-3z'/%3E%3Cpath d='M8.5 12l2.5 2.5 4.5-5'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#0F1411; --ink-2:#161D19; --ink-3:#1F2722; --line:#26302A; --line-2:#36403A;
-  --paper:#EDEFEA; --muted:#B7BFB8; --muted-2:#8C958E;
-  --lime:#B8F25A; --lime-hi:#D6FF8F; --lime-deep:#3F6B12; --lime-ink:#26350F;
-  --bubble-me:#24402E; --bubble-me-label:#9FB8A6;
-  --risk-high:#FFB357; --risk-mid:#F5DC6B; --risk-low:#B8F25A;
+  --ink:#0A0F1E; --ink-2:#111830; --ink-3:#18213A; --line:#222C46; --line-2:#334060;
+  --paper:#E8EEFB; --muted:#B0BBD3; --muted-2:#8794B0;
+  --brand:#2F6BFF; --brand-hi:#4F7FFF; --brand-bright:#6FA0FF; --brand-deep:#1F4FD6; --brand-ink:#F4F7FF;
+  --bubble-me:#1F2B4A; --bubble-me-label:#A9B6D6;
+  --risk-high:#FF9F43; --risk-mid:#F5DC6B; --risk-low:#6FA0FF;
   --display:'Bricolage Grotesque', system-ui, sans-serif;
   --body:'IBM Plex Sans', system-ui, sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--ink);color:var(--paper);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:var(--lime)} a:hover{color:var(--lime-hi)}
+a{color:var(--brand-bright)} a:hover{color:#9BBDFF}
 img,svg{display:block}
 h1,h2,h3{margin:0}
 p{margin:0}
 .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
-.skip{position:absolute;left:-999px;top:8px;background:var(--lime);color:var(--ink);padding:10px 16px;border-radius:8px;z-index:100}
+.skip{position:absolute;left:-999px;top:8px;background:var(--brand);color:#fff;padding:10px 16px;border-radius:8px;z-index:100}
 .skip:focus{left:8px}
-:focus-visible{outline:3px solid var(--lime);outline-offset:3px;border-radius:6px}
+:focus-visible{outline:3px solid var(--brand-bright);outline-offset:3px;border-radius:6px}
 
 /* buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:14px 26px;border-radius:999px;font:600 17px/1.2 var(--body);text-decoration:none;cursor:pointer;border:0;transition:transform .15s ease, background .15s ease}
 .btn:hover{transform:translateY(-1px)}
-.btn-primary{background:var(--lime);color:var(--ink)} .btn-primary:hover{background:var(--lime-hi);color:var(--ink)}
+.btn-primary{background:var(--brand);color:#fff} .btn-primary:hover{background:var(--brand-hi);color:#fff}
 .btn-ghost{background:transparent;color:var(--paper);border:1px solid var(--line-2)} .btn-ghost:hover{color:var(--paper);border-color:var(--muted-2)}
-.btn-dark{background:var(--ink);color:var(--paper)} .btn-dark:hover{color:var(--paper);background:#1d2620}
+.btn-dark{background:var(--ink);color:var(--paper)} .btn-dark:hover{color:var(--paper);background:#18213A}
 
 /* header */
-.site-header{position:sticky;top:0;z-index:50;background:rgba(15,20,17,.88);backdrop-filter:blur(10px);border-bottom:1px solid transparent}
+.site-header{position:sticky;top:0;z-index:50;background:rgba(10,15,30,.88);backdrop-filter:blur(10px);border-bottom:1px solid transparent}
 .site-header.scrolled{border-bottom-color:var(--line)}
 .nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;padding:16px 24px;max-width:1200px;margin:0 auto}
 .logo{display:flex;align-items:center;gap:10px;color:var(--paper);text-decoration:none;font:800 26px/1 var(--display);letter-spacing:-.02em}
@@ -55,8 +55,8 @@ p{margin:0}
 /* hero */
 .hero{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:56px;align-items:center;padding-top:72px;padding-bottom:104px}
 .hero-copy{display:flex;flex-direction:column;gap:28px}
-.pill{display:inline-flex;align-self:flex-start;align-items:center;gap:8px;font-size:14px;font-weight:500;color:var(--lime);border:1px solid #3A4A2A;padding:6px 14px;border-radius:999px}
-.pill .dot{width:8px;height:8px;border-radius:50%;background:var(--lime)}
+.pill{display:inline-flex;align-self:flex-start;align-items:center;gap:8px;font-size:14px;font-weight:500;color:var(--brand-bright);border:1px solid #263A66;padding:6px 14px;border-radius:999px}
+.pill .dot{width:8px;height:8px;border-radius:50%;background:var(--brand-bright)}
 h1{font:800 clamp(42px,6vw,76px)/1.02 var(--display);letter-spacing:-.035em}
 .lead{font-size:20px;color:var(--muted);max-width:530px}
 .cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
@@ -65,7 +65,7 @@ h1{font:800 clamp(42px,6vw,76px)/1.02 var(--display);letter-spacing:-.035em}
 /* phone / chat */
 .phone{justify-self:center;width:100%;max-width:400px;background:var(--ink-2);border:1px solid var(--line);border-radius:28px;padding:18px}
 .chat-head{display:flex;align-items:center;gap:12px;padding:6px 6px 16px;border-bottom:1px solid var(--line)}
-.avatar{width:40px;height:40px;border-radius:50%;background:var(--lime);display:flex;align-items:center;justify-content:center;flex:none}
+.avatar{width:40px;height:40px;border-radius:50%;background:var(--brand);display:flex;align-items:center;justify-content:center;flex:none}
 .chat-head .name{font-weight:600;font-size:15px;line-height:1.3}
 .chat-head .status{font-size:13px;color:var(--muted-2);line-height:1.3}
 .chat{display:flex;flex-direction:column;gap:12px;padding:18px 4px 6px;font-size:15px;line-height:1.5}
@@ -88,13 +88,13 @@ h1{font:800 clamp(42px,6vw,76px)/1.02 var(--display);letter-spacing:-.035em}
 /* sections */
 section{scroll-margin-top:80px}
 .section{padding-top:104px;padding-bottom:104px}
-.eyebrow{font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--lime)}
-.light .eyebrow{color:var(--lime-deep)}
+.eyebrow{font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--brand-bright)}
+.light .eyebrow{color:var(--brand-deep)}
 h2{font:800 clamp(34px,4vw,52px)/1.05 var(--display);letter-spacing:-.03em}
 .section-head{display:flex;flex-direction:column;gap:14px;max-width:700px;margin-bottom:48px}
 .section-head p:not(.eyebrow){color:var(--muted);font-size:19px}
-.light{background:var(--paper);color:var(--ink)}
-.light .section-head p:not(.eyebrow){color:#4A524C}
+.light{background:#F1F4FA;color:var(--ink)}
+.light .section-head p:not(.eyebrow){color:#4A5366}
 
 /* problem */
 .problem{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px}
@@ -105,9 +105,9 @@ h2{font:800 clamp(34px,4vw,52px)/1.05 var(--display);letter-spacing:-.03em}
 /* steps */
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:24px}
 .step{background:#fff;border-radius:20px;padding:32px;display:flex;flex-direction:column;gap:14px}
-.step .n{font:800 48px/1 var(--display);color:var(--lime-deep)}
+.step .n{font:800 48px/1 var(--display);color:var(--brand)}
 .step h3{font-size:22px;font-weight:600}
-.step p{color:#4A524C}
+.step p{color:#4A5366}
 
 /* simulator */
 .sim{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:48px;align-items:start}
@@ -116,7 +116,7 @@ h2{font:800 clamp(34px,4vw,52px)/1.05 var(--display);letter-spacing:-.03em}
 .scenarios{display:flex;flex-wrap:wrap;gap:10px}
 .chip{min-height:44px;padding:10px 18px;border-radius:999px;border:1px solid var(--line-2);background:transparent;color:var(--paper);font:500 15px/1.2 var(--body);cursor:pointer;transition:background .15s, border-color .15s}
 .chip:hover{border-color:var(--muted-2)}
-.chip[aria-pressed="true"]{background:var(--lime);border-color:var(--lime);color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:#fff}
 .compose{display:flex;flex-direction:column;gap:10px}
 .compose label{font-weight:600;font-size:15px}
 .compose textarea{font:inherit;font-size:16px;min-height:110px;resize:vertical;padding:14px 16px;border-radius:14px;border:1px solid var(--line-2);background:var(--ink-2);color:var(--paper)}
@@ -134,7 +134,7 @@ h2{font:800 clamp(34px,4vw,52px)/1.05 var(--display);letter-spacing:-.03em}
 .cpf-item{display:flex;gap:16px;align-items:flex-start}
 .cpf-item svg{flex:none;margin-top:3px}
 .cpf-item h3{font-size:20px;font-weight:600;margin-bottom:4px}
-.cpf-item p{color:#4A524C}
+.cpf-item p{color:#4A5366}
 .cpf .phone{color:var(--paper)}
 
 /* scams */
@@ -161,26 +161,26 @@ h2{font:800 clamp(34px,4vw,52px)/1.05 var(--display);letter-spacing:-.03em}
 /* plans */
 .plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px;align-items:stretch}
 .plan{background:#fff;border-radius:22px;padding:34px;display:flex;flex-direction:column;gap:18px;border:2px solid transparent}
-.plan.featured{border-color:var(--ink)}
-.plan .tag{align-self:flex-start;font-size:13px;font-weight:600;background:var(--ink);color:var(--lime);padding:4px 12px;border-radius:999px}
+.plan.featured{border-color:var(--brand)}
+.plan .tag{align-self:flex-start;font-size:13px;font-weight:600;background:var(--brand);color:#fff;padding:4px 12px;border-radius:999px}
 .plan h3{font:700 26px/1.2 var(--display)}
 .price{font:800 36px/1 var(--display);letter-spacing:-.02em}
-.price small{font:500 15px var(--body);color:#4A524C}
+.price small{font:500 15px var(--body);color:#4A5366}
 .plan ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;flex:1}
-.plan li{display:flex;gap:10px;color:#2E3530}
+.plan li{display:flex;gap:10px;color:#2D3445}
 .plan li svg{flex:none;margin-top:4px}
 .plan .btn{align-self:stretch}
 
 /* waitlist */
-.cta-card{background:var(--lime);color:var(--ink);border-radius:28px;padding:clamp(32px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:48px;align-items:center}
-.cta-card p{font-size:18px;color:var(--lime-ink)}
+.cta-card{background:var(--brand);color:#fff;border-radius:28px;padding:clamp(32px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:48px;align-items:center}
+.cta-card p{font-size:18px;color:var(--brand-ink)}
 .cta-card .stack{display:flex;flex-direction:column;gap:16px}
 form{display:flex;flex-direction:column;gap:16px}
 .field{display:flex;flex-direction:column;gap:6px}
 .field label{font-weight:600;font-size:15px}
 .field input,.field select{font:inherit;font-size:16px;min-height:50px;padding:12px 16px;border-radius:12px;border:1.5px solid var(--ink);background:#fff;color:var(--ink)}
-.form-note{font-size:13px;color:var(--lime-ink)}
-.form-msg{font-weight:600;font-size:16px;background:var(--ink);color:var(--lime);padding:14px 18px;border-radius:12px}
+.form-note{font-size:13px;color:var(--brand-ink)}
+.form-msg{font-weight:600;font-size:16px;background:var(--ink);color:var(--brand-bright);padding:14px 18px;border-radius:12px}
 .form-msg[hidden]{display:none}
 
 /* faq */
@@ -204,7 +204,7 @@ footer{border-top:1px solid var(--line)}
 <header class="site-header" id="topo">
   <div class="nav">
     <a href="#conteudo" class="logo" aria-label="Fraus, início">
-      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#B8F25A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
       Fraus
     </a>
     <nav class="nav-links" aria-label="Principal">
@@ -224,7 +224,7 @@ footer{border-top:1px solid var(--line)}
 <section class="wrap hero" aria-labelledby="hero-title">
   <div class="hero-copy">
     <p class="pill"><span class="dot" aria-hidden="true"></span>Agente antifraude direto no WhatsApp</p>
-    <h1 id="hero-title">Recebeu algo estranho? Pergunta pro Fraus antes de pagar.</h1>
+    <h1 id="hero-title">Recebeu algo estranho? Pergunta pro Fraus.</h1>
     <p class="lead">Encaminhe a mensagem, o link, o print ou o boleto para o Fraus no WhatsApp. Em segundos ele te diz se tem cara de golpe — e por quê. E ainda fica de olho no seu CPF, avisando se alguém tentar usá-lo no seu lugar.</p>
     <div class="cta-row">
       <a href="#simulacao" class="btn btn-primary">Testar a simulação</a>
@@ -235,7 +235,7 @@ footer{border-top:1px solid var(--line)}
 
   <div class="phone" aria-label="Exemplo de conversa com o Fraus">
     <div class="chat-head">
-      <div class="avatar"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0F1411" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6l8-3z"/></svg></div>
+      <div class="avatar"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6l8-3z"/></svg></div>
       <div><div class="name">Fraus</div><div class="status">online</div></div>
     </div>
     <div class="chat">
@@ -335,7 +335,7 @@ footer{border-top:1px solid var(--line)}
 
     <div class="phone">
       <div class="chat-head">
-        <div class="avatar"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0F1411" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6l8-3z"/></svg></div>
+        <div class="avatar"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6l8-3z"/></svg></div>
         <div><div class="name">Fraus</div><div class="status" id="sim-status">online</div></div>
       </div>
       <div class="chat" id="sim-chat" aria-live="polite" aria-label="Conversa simulada com o Fraus">
@@ -353,32 +353,32 @@ footer{border-top:1px solid var(--line)}
   </div>
   <div class="scam-grid">
     <div class="scam">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B8F25A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M17 8l4 4m0-4l-4 4"/></svg>
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M17 8l4 4m0-4l-4 4"/></svg>
       <h3>Falso parente ou amigo</h3>
       <p>"Troquei de número" seguido de pedido de dinheiro.</p>
     </div>
     <div class="scam">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B8F25A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>
       <h3>Links falsos</h3>
       <p>Páginas que imitam bancos, lojas e entregas para roubar senha e cartão.</p>
     </div>
     <div class="scam">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B8F25A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
       <h3>Falsa central do banco</h3>
       <p>Contato "da segurança do banco" pedindo código, senha ou transferência.</p>
     </div>
     <div class="scam">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B8F25A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8v8M11 8v8M14 8v8M17 8v8"/></svg>
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8v8M11 8v8M14 8v8M17 8v8"/></svg>
       <h3>Boleto e Pix adulterados</h3>
       <p>Beneficiário que não bate com quem deveria receber o pagamento.</p>
     </div>
     <div class="scam">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B8F25A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12v8H4v-8"/><path d="M2 7h20v5H2z"/><path d="M12 20V7"/><path d="M12 7c-2-3-6-3-6 0m6 0c2-3 6-3 6 0"/></svg>
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12v8H4v-8"/><path d="M2 7h20v5H2z"/><path d="M12 20V7"/><path d="M12 7c-2-3-6-3-6 0m6 0c2-3 6-3 6 0"/></svg>
       <h3>Prêmios e promoções</h3>
       <p>"Você ganhou" com taxa para liberar o prêmio.</p>
     </div>
     <div class="scam">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B8F25A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
       <h3>Falsas vagas de emprego</h3>
       <p>Ofertas fáceis demais que pedem pagamento ou dados pessoais.</p>
     </div>
@@ -396,15 +396,15 @@ footer{border-top:1px solid var(--line)}
       </div>
       <div class="cpf-list">
         <div class="cpf-item">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3F6B12" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
           <div><h3>Verificação do CPF</h3><p>Descubra se há contas, empréstimos, compras ou cadastros no seu nome que você não reconhece.</p></div>
         </div>
         <div class="cpf-item">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3F6B12" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10 21a2 2 0 0 0 4 0"/></svg>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10 21a2 2 0 0 0 4 0"/></svg>
           <div><h3>Alerta no WhatsApp</h3><p>Quando aparecer algo suspeito ligado ao seu CPF, o Fraus te manda uma mensagem e pergunta: foi você?</p></div>
         </div>
         <div class="cpf-item">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3F6B12" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
           <div><h3>O que fazer em seguida</h3><p>Se não foi você, o Fraus mostra o passo a passo: contestar, registrar ocorrência e proteger seus dados.</p></div>
         </div>
       </div>
@@ -412,7 +412,7 @@ footer{border-top:1px solid var(--line)}
 
     <div class="phone" aria-label="Exemplo de alerta de CPF enviado pelo Fraus">
       <div class="chat-head">
-        <div class="avatar"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0F1411" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6l8-3z"/></svg></div>
+        <div class="avatar"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6l8-3z"/></svg></div>
         <div><div class="name">Fraus</div><div class="status">online</div></div>
       </div>
       <div class="chat">
@@ -495,10 +495,10 @@ footer{border-top:1px solid var(--line)}
         <h3>Pessoal</h3>
         <p class="price">[R$ 0] <small>/mês</small></p>
         <ul>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3F6B12" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>[Nº] verificações por mês</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3F6B12" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Mensagens, links e prints</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3F6B12" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Explicação de cada alerta</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3F6B12" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Verificação do seu CPF</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>[Nº] verificações por mês</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Mensagens, links e prints</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Explicação de cada alerta</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Verificação do seu CPF</li>
         </ul>
         <a href="#lista" class="btn btn-dark">Entrar na lista</a>
       </div>
@@ -507,11 +507,11 @@ footer{border-top:1px solid var(--line)}
         <h3>Família</h3>
         <p class="price">[R$ XX] <small>/mês</small></p>
         <ul>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3F6B12" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Verificações ilimitadas</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3F6B12" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Até [Nº] pessoas da família</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3F6B12" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Análise de boletos e Pix</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3F6B12" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Monitoramento do CPF de toda a família</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3F6B12" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>[RECURSO EXTRA]</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Verificações ilimitadas</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Até [Nº] pessoas da família</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Análise de boletos e Pix</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Monitoramento do CPF de toda a família</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>[RECURSO EXTRA]</li>
         </ul>
         <a href="#lista" class="btn btn-dark">Quero o Família</a>
       </div>
@@ -519,9 +519,9 @@ footer{border-top:1px solid var(--line)}
         <h3>Empresas</h3>
         <p class="price">Sob consulta</p>
         <ul>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3F6B12" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Fraus com a sua marca</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3F6B12" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Integração com seu atendimento</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3F6B12" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Relatórios de tentativas de golpe</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Fraus com a sua marca</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Integração com seu atendimento</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Relatórios de tentativas de golpe</li>
         </ul>
         <a href="#lista" class="btn btn-dark">Falar com a gente</a>
       </div>
@@ -563,31 +563,31 @@ footer{border-top:1px solid var(--line)}
 <section id="duvidas" class="wrap section faq" style="padding-top:0" aria-labelledby="faq-title">
   <h2 id="faq-title" style="margin-bottom:32px">Dúvidas frequentes</h2>
   <details>
-    <summary>O Fraus é gratuito?<svg class="plus" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B8F25A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+    <summary>O Fraus é gratuito?<svg class="plus" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
     <p>[DEFINIR — ex.: Durante a fase de testes, sim. Depois haverá um plano gratuito com limite de verificações e planos pagos.]</p>
   </details>
   <details>
-    <summary>O Fraus lê minhas outras conversas?<svg class="plus" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B8F25A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+    <summary>O Fraus lê minhas outras conversas?<svg class="plus" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
     <p>Não. Ele só vê o que você escolhe encaminhar para ele.</p>
   </details>
   <details>
-    <summary>E se ele disser que é seguro e for golpe?<svg class="plus" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B8F25A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+    <summary>E se ele disser que é seguro e for golpe?<svg class="plus" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
     <p>O Fraus é uma segunda opinião, não uma garantia. Na dúvida, confirme por outro canal com a pessoa ou empresa antes de pagar.</p>
   </details>
   <details>
-    <summary>Como o Fraus verifica fraudes no meu CPF?<svg class="plus" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B8F25A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+    <summary>Como o Fraus verifica fraudes no meu CPF?<svg class="plus" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
     <p>Com a sua autorização, o Fraus consulta [FONTES DE DADOS — ex.: birôs de crédito e bases parceiras] em busca de registros ligados ao seu CPF, como pedidos de crédito, contas abertas e cadastros. Se encontrar algo fora do comum, te avisa no WhatsApp.</p>
   </details>
   <details>
-    <summary>É seguro informar meu CPF ao Fraus?<svg class="plus" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B8F25A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+    <summary>É seguro informar meu CPF ao Fraus?<svg class="plus" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
     <p>Seu CPF é usado só para a verificação, com consentimento explícito e de acordo com a LGPD. O Fraus nunca pede senhas, códigos ou dados de cartão.</p>
   </details>
   <details>
-    <summary>Posso usar para ajudar meus pais?<svg class="plus" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B8F25A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+    <summary>Posso usar para ajudar meus pais?<svg class="plus" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
     <p>Pode — e é uma ótima ideia. Basta salvar o contato do Fraus no celular deles.</p>
   </details>
   <details>
-    <summary>Preciso instalar alguma coisa?<svg class="plus" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B8F25A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+    <summary>Preciso instalar alguma coisa?<svg class="plus" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
     <p>Não. O Fraus funciona dentro do WhatsApp, como um contato comum.</p>
   </details>
 </section>
