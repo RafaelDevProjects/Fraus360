@@ -1,14 +1,17 @@
 {
-  "name": "guardiao-mvp",
-  "version": "0.1.0",
+  "name": "fraus-mvp",
+  "version": "0.2.0",
+  "private": true,
   "type": "module",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "node --watch server.js",
+    "simular": "node sim.js",
+    "test": "node --test \"test/*.test.js\"",
     "test:llm": "node test-llm.js"
   },
-  "engines": { "node": ">=18" },
+  "engines": { "node": ">=20" },
   "dependencies": {
     "axios": "^1.7.0",
     "dotenv": "^16.4.0",

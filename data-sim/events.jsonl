@@ -1,0 +1,25 @@
+{"ts":"2026-10-26T18:17:27.107Z","uid":"267ef904996388a033f8f91a","tipo":"mensagem","origem":"texto"}
+{"ts":"2026-10-26T18:17:44.086Z","uid":"267ef904996388a033f8f91a","tipo":"mensagem","origem":"texto"}
+{"ts":"2026-10-26T18:17:44.467Z","uid":"267ef904996388a033f8f91a","tipo":"analise","nivel":"alto","golpe":"golpe do falso parente ou amigo","itens":["pix"],"origem":"texto"}
+{"ts":"2026-10-26T18:17:59.950Z","uid":"267ef904996388a033f8f91a","tipo":"mensagem","origem":"texto"}
+{"ts":"2026-10-26T18:18:04.335Z","uid":"267ef904996388a033f8f91a","tipo":"mensagem","origem":"texto"}
+{"ts":"2026-10-26T18:18:10.745Z","uid":"267ef904996388a033f8f91a","tipo":"botao","id":"checar"}
+{"ts":"2026-10-26T18:18:17.718Z","uid":"267ef904996388a033f8f91a","tipo":"mensagem","origem":"texto"}
+{"ts":"2026-10-26T18:18:18.458Z","uid":"267ef904996388a033f8f91a","tipo":"analise","nivel":"alto","golpe":"golpe do falso parente ou amigo","itens":["pix"],"origem":"texto"}
+{"ts":"2026-10-26T18:22:00.258Z","uid":"8effef8cfae3a28690e01a02","tipo":"mensagem","origem":"texto"}
+{"ts":"2026-10-26T18:22:11.881Z","uid":"8effef8cfae3a28690e01a02","tipo":"mensagem","origem":"texto"}
+{"ts":"2026-10-26T18:24:02.723Z","uid":"8effef8cfae3a28690e01a02","tipo":"mensagem","origem":"texto"}
+{"ts":"2026-10-26T18:24:07.463Z","uid":"8effef8cfae3a28690e01a02","tipo":"mensagem","origem":"texto"}
+{"ts":"2026-10-26T18:24:14.411Z","uid":"8effef8cfae3a28690e01a02","tipo":"mensagem","origem":"texto"}
+{"ts":"2026-10-26T18:27:08.927Z","uid":"8effef8cfae3a28690e01a02","tipo":"mensagem","origem":"texto"}
+{"ts":"2026-10-26T18:27:11.304Z","uid":"8effef8cfae3a28690e01a02","tipo":"mensagem","origem":"texto"}
+{"ts":"2026-10-26T18:27:31.995Z","uid":"8effef8cfae3a28690e01a02","tipo":"mensagem","origem":"texto"}
+{"ts":"2026-10-26T18:27:43.619Z","uid":"8effef8cfae3a28690e01a02","tipo":"analise","nivel":"alto","golpe":"golpe da falsa entrega","itens":["link"],"origem":"texto"}
+{"ts":"2026-10-26T18:27:43.620Z","uid":"8effef8cfae3a28690e01a02","tipo":"mensagem","origem":"texto"}
+{"ts":"2026-10-26T18:27:44.909Z","uid":"8effef8cfae3a28690e01a02","tipo":"analise","nivel":"alto","golpe":"golpe da falsa entrega","itens":["link"],"origem":"texto"}
+{"ts":"2026-10-26T18:30:08.532Z","uid":"8effef8cfae3a28690e01a02","tipo":"botao","id":"denunciar"}
+{"ts":"2026-10-26T18:30:08.533Z","uid":"8effef8cfae3a28690e01a02","tipo":"denuncia","origem":"botao","quantidade":1}
+{"ts":"2026-10-26T18:30:21.118Z","uid":"8effef8cfae3a28690e01a02","tipo":"botao","id":"inc_pix"}
+{"ts":"2026-10-26T18:30:21.119Z","uid":"8effef8cfae3a28690e01a02","tipo":"caso","casoTipo":"pix"}
+{"ts":"2026-10-26T18:30:42.364Z","uid":"8effef8cfae3a28690e01a02","tipo":"mensagem","origem":"texto"}
+{"ts":"2026-10-26T18:30:50.942Z","uid":"8effef8cfae3a28690e01a02","tipo":"botao","id":"dossie"}

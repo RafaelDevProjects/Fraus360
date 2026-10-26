@@ -1,0 +1,39 @@
+{"ts":"2026-10-26T22:46:00.776Z","uid":"a394381003d4f469a7539805","tipo":"mensagem","origem":"texto"}
+{"ts":"2026-10-26T22:46:41.110Z","uid":"a394381003d4f469a7539805","tipo":"mensagem","origem":"texto"}
+{"ts":"2026-10-26T22:47:30.375Z","uid":"a394381003d4f469a7539805","tipo":"mensagem","origem":"texto"}
+{"ts":"2026-10-26T22:47:41.201Z","uid":"a394381003d4f469a7539805","tipo":"botao","id":"checar"}
+{"ts":"2026-10-26T22:48:24.325Z","uid":"a394381003d4f469a7539805","tipo":"mensagem","origem":"texto"}
+{"ts":"2026-10-26T22:56:36.110Z","uid":"a394381003d4f469a7539805","tipo":"mensagem","origem":"texto"}
+{"ts":"2026-10-26T22:56:46.699Z","uid":"a394381003d4f469a7539805","tipo":"botao","id":"checar"}
+{"ts":"2026-10-26T22:56:59.567Z","uid":"a394381003d4f469a7539805","tipo":"mensagem","origem":"texto"}
+{"ts":"2026-10-26T22:57:02.317Z","uid":"a394381003d4f469a7539805","tipo":"analise","nivel":"alto","golpe":"golpe da falsa entrega","itens":["link"],"origem":"texto"}
+{"ts":"2026-10-26T22:57:15.805Z","uid":"a394381003d4f469a7539805","tipo":"botao","id":"denunciar"}
+{"ts":"2026-10-26T22:57:15.806Z","uid":"a394381003d4f469a7539805","tipo":"denuncia","origem":"botao","quantidade":1}
+{"ts":"2026-10-26T22:57:34.883Z","uid":"a394381003d4f469a7539805","tipo":"mensagem","origem":"texto"}
+{"ts":"2026-10-26T22:57:47.833Z","uid":"a394381003d4f469a7539805","tipo":"botao","id":"menu"}
+{"ts":"2026-10-26T22:58:27.302Z","uid":"a394381003d4f469a7539805","tipo":"mensagem","origem":"texto"}
+{"ts":"2026-10-26T22:58:34.328Z","uid":"a394381003d4f469a7539805","tipo":"botao","id":"checar"}
+{"ts":"2026-10-26T22:59:06.793Z","uid":"a394381003d4f469a7539805","tipo":"mensagem","origem":"texto"}
+{"ts":"2026-10-26T22:59:14.259Z","uid":"a394381003d4f469a7539805","tipo":"botao","id":"checar"}
+{"ts":"2026-10-26T22:59:29.416Z","uid":"a394381003d4f469a7539805","tipo":"mensagem","origem":"texto"}
+{"ts":"2026-10-26T22:59:33.948Z","uid":"a394381003d4f469a7539805","tipo":"analise","nivel":"alto","golpe":"golpe da falsa entrega","itens":["link"],"origem":"texto"}
+{"ts":"2026-10-26T22:59:43.085Z","uid":"a394381003d4f469a7539805","tipo":"botao","id":"denunciar"}
+{"ts":"2026-10-26T22:59:50.200Z","uid":"a394381003d4f469a7539805","tipo":"botao","id":"menu"}
+{"ts":"2026-10-26T22:59:55.639Z","uid":"a394381003d4f469a7539805","tipo":"botao","id":"checar"}
+{"ts":"2026-10-26T23:00:09.603Z","uid":"a394381003d4f469a7539805","tipo":"mensagem","origem":"texto"}
+{"ts":"2026-10-26T23:00:13.725Z","uid":"a394381003d4f469a7539805","tipo":"analise","nivel":"baixo","golpe":null,"itens":["cnpj"],"origem":"texto"}
+{"ts":"2026-10-26T23:00:28.869Z","uid":"a394381003d4f469a7539805","tipo":"botao","id":"incidente"}
+{"ts":"2026-10-26T23:00:37.579Z","uid":"a394381003d4f469a7539805","tipo":"botao","id":"inc_pix"}
+{"ts":"2026-10-26T23:00:37.580Z","uid":"a394381003d4f469a7539805","tipo":"caso","casoTipo":"pix"}
+{"ts":"2026-10-26T23:00:52.610Z","uid":"a394381003d4f469a7539805","tipo":"botao","id":"menu"}
+{"ts":"2026-10-26T23:00:57.020Z","uid":"a394381003d4f469a7539805","tipo":"botao","id":"cpf"}
+{"ts":"2026-10-26T23:01:10.538Z","uid":"a394381003d4f469a7539805","tipo":"botao","id":"cpf_estranho"}
+{"ts":"2026-10-26T23:01:10.539Z","uid":"a394381003d4f469a7539805","tipo":"checkup_cpf","resultado":"estranho"}
+{"ts":"2026-10-26T23:01:10.539Z","uid":"a394381003d4f469a7539805","tipo":"caso","casoTipo":"identidade"}
+{"ts":"2026-10-26T23:01:29.807Z","uid":"a394381003d4f469a7539805","tipo":"mensagem","origem":"texto"}
+{"ts":"2026-10-26T23:01:36.245Z","uid":"a394381003d4f469a7539805","tipo":"botao","id":"dossie"}
+{"ts":"2026-10-26T23:01:52.267Z","uid":"a394381003d4f469a7539805","tipo":"botao","id":"menu"}
+{"ts":"2026-10-26T23:03:29.066Z","uid":"a394381003d4f469a7539805","tipo":"botao","id":"checar"}
+{"ts":"2026-10-26T23:03:47.742Z","uid":"a394381003d4f469a7539805","tipo":"imagem","tipoImagem":"foto de golfinho"}
+{"ts":"2026-10-26T23:05:18.141Z","uid":"a394381003d4f469a7539805","tipo":"imagem","tipoImagem":"Alerta de golpe (cartaz/imagem informativa)"}
+{"ts":"2026-10-26T23:05:44.217Z","uid":"a394381003d4f469a7539805","tipo":"analise","nivel":"baixo","golpe":null,"itens":["mensagem"],"origem":"imagem"}
