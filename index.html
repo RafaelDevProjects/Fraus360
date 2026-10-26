@@ -210,7 +210,25 @@ form{display:flex;flex-direction:column;gap:16px}
 .faq details[open] summary .plus{transform:rotate(45deg)}
 .faq details p{color:var(--muted);padding:0 0 22px}
 
+/* quick replies (botões do WhatsApp no simulador) */
+.qr{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.qr span{font-size:12.5px;font-weight:500;color:var(--brand-bright);border:1px solid var(--line-2);border-radius:999px;padding:4px 10px}
+.bot ol.signals{padding-left:20px}
+
+/* o que ele checa */
+.check-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.check{background:var(--ink);padding:32px;display:flex;flex-direction:column;gap:10px}
+.check h3{font-size:20px;font-weight:600}
+.check p{color:var(--muted)}
+.check .how{font-size:14px;color:var(--muted-2);border-top:1px solid var(--line);padding-top:12px;margin-top:auto}
+
+/* se você caiu (versão escura da lista do CPF) */
+.dark-list .cpf-item p{color:var(--muted)}
+.incident{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:56px;align-items:center}
+.incident .cpf-copy{display:flex;flex-direction:column;gap:36px}
+
 footer{border-top:1px solid var(--line)}
+.foot a{color:var(--muted)} .foot a:hover{color:var(--paper)}
 .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding-top:32px;padding-bottom:32px;font-size:14px;color:var(--muted-2)}
 .foot strong{color:var(--paper);font:700 18px var(--display)}
 </style>
@@ -227,8 +245,9 @@ footer{border-top:1px solid var(--line)}
     <nav class="nav-links" aria-label="Principal">
       <a href="#mercado">Por que o Fraus</a>
       <a href="#como-funciona">Como funciona</a>
-      <a href="#cpf">Proteção do CPF</a>
+      <a href="#checa">O que ele checa</a>
       <a href="#simulacao">Teste agora</a>
+      <a href="#caiu">Se você caiu</a>
       <a href="#planos">Planos</a>
       <a href="#duvidas">Dúvidas</a>
       <a href="#lista" class="btn btn-primary">Entrar na lista</a>
@@ -243,7 +262,7 @@ footer{border-top:1px solid var(--line)}
   <div class="hero-copy">
     <p class="pill"><span class="dot" aria-hidden="true"></span>Agente antifraude direto no WhatsApp</p>
     <h1 id="hero-title">Recebeu algo estranho? Pergunta pro Fraus antes de pagar.</h1>
-    <p class="lead">Encaminhe a mensagem, o link, o print ou o boleto para o Fraus no WhatsApp. Em segundos ele te diz se tem cara de golpe — e por quê. E ainda fica de olho no seu CPF, avisando se alguém tentar usá-lo no seu lugar.</p>
+    <p class="lead">Encaminhe a mensagem, o link, o print ou o boleto para o Fraus no WhatsApp. Em segundos ele te diz se tem cara de golpe — e por quê. Se você já caiu, ele te mostra o que fazer nos primeiros minutos e monta o dossiê para o banco.</p>
     <div class="cta-row">
       <a href="#simulacao" class="btn btn-primary">Testar a simulação</a>
       <a href="#lista" class="btn btn-ghost">Entrar na lista de espera</a>
@@ -348,13 +367,60 @@ footer{border-top:1px solid var(--line)}
       <div class="step">
         <span class="n" aria-hidden="true">2</span>
         <h3>O Fraus analisa</h3>
-        <p>Ele compara o conteúdo com padrões conhecidos de golpe: urgência, troca de número, links disfarçados, dados bancários que não batem.</p>
+        <p>Ele procura os sinais clássicos de golpe, cruza o link com bases de sites maliciosos, confere se o endereço imita um banco ou loja, valida o código do boleto e consulta a empresa na Receita Federal.</p>
       </div>
       <div class="step">
         <span class="n" aria-hidden="true">3</span>
         <h3>Você decide com clareza</h3>
-        <p>Receba um veredito simples, os sinais de alerta que ele encontrou e o que fazer a seguir para se proteger.</p>
+        <p>Receba um veredito simples, os sinais que ele encontrou e o que fazer. Com um toque você denuncia, e quem receber o mesmo golpe depois já é avisado.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- O QUE ELE CHECA -->
+<section id="checa" class="wrap section" aria-labelledby="checa-title">
+  <div class="section-head">
+    <p class="eyebrow">O que ele checa</p>
+    <h2 id="checa-title">Mande do jeito que chegou. Ele sabe o que procurar.</h2>
+    <p>Quem decide o nível de risco são regras e fontes verificáveis. A inteligência artificial lê os prints e explica o resultado em português simples.</p>
+  </div>
+  <div class="check-grid">
+    <div class="check">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      <h3>Mensagens</h3>
+      <p>Reconhece o falso parente, a falsa central do banco, o falso prêmio, a falsa entrega, a renda fácil e a falsa cobrança.</p>
+      <p class="how">Procura troca de número, pedido de Pix, código, taxa, ameaça e urgência.</p>
+    </div>
+    <div class="check">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>
+      <h3>Links</h3>
+      <p>Pega o site que finge ser banco, loja ou governo, como <span style="white-space:nowrap">"banc0-itau"</span> ou <span style="white-space:nowrap">"gov-br-regulariza.online"</span>, mesmo antes de entrar em qualquer lista.</p>
+      <p class="how">Google Safe Browsing, VirusTotal, PhishTank, idade do domínio e destino real de links encurtados.</p>
+    </div>
+    <div class="check">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 17l-5-5-8 7"/></svg>
+      <h3>Prints e fotos</h3>
+      <p>Lê o que está escrito na imagem: conversa, SMS, e-mail, site ou comprovante, e analisa como se fosse texto.</p>
+      <p class="how">Leitura por inteligência artificial com visão.</p>
+    </div>
+    <div class="check">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8v8M11 8v8M14 8v8M17 8v8"/></svg>
+      <h3>Boletos</h3>
+      <p>Descobre se o código foi alterado e mostra o banco emissor, o valor e o vencimento antes de você pagar.</p>
+      <p class="how">Validação dos dígitos verificadores da linha digitável.</p>
+    </div>
+    <div class="check">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg>
+      <h3>CNPJ e chave Pix</h3>
+      <p>Confere se a loja existe, se está ativa e há quanto tempo foi aberta, e se a chave Pix já foi denunciada.</p>
+      <p class="how">Consulta à Receita Federal e à base de denúncias do Fraus.</p>
+    </div>
+    <div class="check">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22V4"/><path d="M4 4h12l-2 4 2 4H4"/></svg>
+      <h3>Denúncias da comunidade</h3>
+      <p>Cada link, número ou chave Pix denunciado passa a alertar quem receber o mesmo golpe depois.</p>
+      <p class="how">Quanto mais gente usa, mais cedo o golpe é pego.</p>
     </div>
   </div>
 </section>
@@ -376,8 +442,11 @@ footer{border-top:1px solid var(--line)}
           <button class="chip" type="button" data-scn="banco" aria-pressed="false">Falsa central do banco</button>
           <button class="chip" type="button" data-scn="premio" aria-pressed="false">Prêmio com taxa</button>
           <button class="chip" type="button" data-scn="vaga" aria-pressed="false">Vaga de emprego</button>
+          <button class="chip" type="button" data-scn="boleto" aria-pressed="false">Boleto adulterado</button>
+          <button class="chip" type="button" data-scn="cnpj" aria-pressed="false">Loja com CNPJ falso</button>
           <button class="chip" type="button" data-scn="normal" aria-pressed="false">Mensagem normal</button>
-          <button class="chip" type="button" data-scn="cpf" aria-pressed="false">Verificar meu CPF</button>
+          <button class="chip" type="button" data-scn="golpe" aria-pressed="false">Já caí no golpe</button>
+          <button class="chip" type="button" data-scn="cpf" aria-pressed="false">Checkup do CPF</button>
         </div>
       </div>
       <form class="compose" id="compose" novalidate>
@@ -388,7 +457,7 @@ footer{border-top:1px solid var(--line)}
           <button type="button" class="btn btn-ghost" id="reset">Limpar conversa</button>
         </div>
       </form>
-      <p class="disclaimer">Esta é uma simulação demonstrativa que roda no seu navegador, com regras simples. Nada do que você digita é enviado para lugar nenhum. O Fraus de verdade faz uma análise bem mais completa.</p>
+      <p class="disclaimer">Esta é uma simulação demonstrativa que roda no seu navegador, com regras simples. Nada do que você digita é enviado para lugar nenhum. O Fraus de verdade consulta bases de sites maliciosos, a Receita Federal e as denúncias da comunidade.</p>
     </div>
 
     <div class="phone">
@@ -449,46 +518,101 @@ footer{border-top:1px solid var(--line)}
     <div class="cpf-copy">
       <div class="section-head" style="margin-bottom:0">
         <p class="eyebrow">Proteção do CPF</p>
-        <h2 id="cpf-title">Seu CPF também pode ser alvo. O Fraus fica de olho.</h2>
-        <p>Com dados vazados, golpistas abrem contas, pedem empréstimos e fazem compras no nome de outras pessoas. Muitas vezes você só descobre quando a cobrança chega. O Fraus verifica fraudes ligadas ao seu CPF e te avisa no WhatsApp.</p>
+        <h2 id="cpf-title">Seu CPF também pode ser alvo. O Fraus te ajuda a conferir.</h2>
+        <p>Com dados vazados, golpistas abrem contas, pedem empréstimos e fazem compras no nome de outras pessoas. Muitas vezes você só descobre quando a cobrança chega. O Fraus te guia num checkup gratuito do CPF nos canais oficiais — sem você precisar informar o CPF para ele.</p>
         <p>Não é um risco distante: em 2021, um megavazamento expôs CPF, nome e data de nascimento de 223 milhões de brasileiros.<a href="#fontes" class="ref" aria-label="Fonte 6">6</a></p>
       </div>
       <div class="cpf-list">
         <div class="cpf-item">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-          <div><h3>Verificação do CPF</h3><p>Descubra se há contas, empréstimos, compras ou cadastros no seu nome que você não reconhece.</p></div>
+          <div><h3>Checkup guiado</h3><p>O Fraus te leva ao Registrato, do Banco Central, que mostra empréstimos, contas e chaves Pix no seu nome, e à Serasa, que mostra dívidas. Os dois são gratuitos.</p></div>
         </div>
         <div class="cpf-item">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10 21a2 2 0 0 0 4 0"/></svg>
-          <div><h3>Alerta no WhatsApp</h3><p>Quando aparecer algo suspeito ligado ao seu CPF, o Fraus te manda uma mensagem e pergunta: foi você?</p></div>
+          <div><h3>Lembrete todo mês</h3><p>Fraude de identidade aparece aos poucos. A cada 30 dias, o Fraus te lembra de refazer o checkup.</p></div>
         </div>
         <div class="cpf-item">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-          <div><h3>O que fazer em seguida</h3><p>Se não foi você, o Fraus mostra o passo a passo: contestar, registrar ocorrência e proteger seus dados.</p></div>
+          <div><h3>Se não foi você</h3><p>Achou algo que não reconhece? O Fraus abre um caso e mostra o passo a passo: contestar, registrar ocorrência e proteger seus dados.</p></div>
         </div>
       </div>
     </div>
 
-    <div class="phone" aria-label="Exemplo de alerta de CPF enviado pelo Fraus">
+    <div class="phone" aria-label="Exemplo de checkup de CPF com o Fraus">
       <div class="chat-head">
         <div class="avatar"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6l8-3z"/></svg></div>
         <div><div class="name">Fraus</div><div class="status">online</div></div>
       </div>
       <div class="chat">
+        <div class="bubble me" style="max-width:60%">cpf</div>
         <div class="bubble bot">
-          <span class="verdict v-high">Alerta no seu CPF</span>
-          <span>Encontrei um <strong>pedido de empréstimo</strong> feito com o seu CPF hoje, às 14h12.</span>
-          <span>Foi você?</span>
-        </div>
-        <div class="bubble me" style="max-width:60%">Não fui eu!</div>
-        <div class="bubble bot">
-          <span>Entendi. Vamos agir rápido:</span>
+          <span class="verdict v-low">Checkup gratuito do CPF</span>
+          <span>Eu não peço seu CPF. Consulte nos sites oficiais e me conta o que achou:</span>
           <ol class="signals">
-            <li>Conteste o pedido com a instituição</li>
-            <li>Registre um boletim de ocorrência online</li>
-            <li>Ative alertas no seu banco</li>
+            <li><strong>Registrato</strong>: empréstimos, contas e chaves Pix no seu nome</li>
+            <li><strong>Serasa</strong>: dívidas que você não reconhece</li>
           </ol>
-          <span class="tip">Quer que eu te guie em cada passo?</span>
+          <div class="qr" aria-hidden="true"><span>✅ Reconheço tudo</span><span>⚠️ Achei algo errado</span></div>
+        </div>
+        <div class="bubble me" style="max-width:70%">⚠️ Achei algo errado</div>
+        <div class="bubble bot">
+          <span>Calma, dá para agir. Abri o <strong>caso #FR-102</strong>:</span>
+          <ol class="signals">
+            <li>Conteste com a instituição e anote o protocolo</li>
+            <li>Registre um boletim de ocorrência online</li>
+            <li>Conteste a dívida na Serasa, anexando o B.O.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SE VOCÊ CAIU -->
+<section id="caiu" aria-labelledby="caiu-title">
+  <div class="wrap section incident">
+    <div class="cpf-copy">
+      <div class="section-head" style="margin-bottom:0">
+        <p class="eyebrow">Se você já caiu</p>
+        <h2 id="caiu-title">Caiu no golpe? O Fraus te diz o que fazer nos primeiros minutos.</h2>
+        <p>No Pix, cada minuto conta: o dinheiro costuma ser movimentado rápido. O Fraus mostra o passo a passo certo para o que aconteceu e organiza tudo o que o banco e a polícia vão pedir.</p>
+      </div>
+      <div class="cpf-list dark-list">
+        <div class="cpf-item">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          <div><h3>Um checklist para cada caso</h3><p>Fez Pix, passou senha ou código, clicou ou deu dados: cada situação tem passos diferentes, como pedir ao banco o MED, o Mecanismo Especial de Devolução do Pix.</p></div>
+        </div>
+        <div class="cpf-item">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M8 13h8M8 17h5"/></svg>
+          <div><h3>Dossiê pronto</h3><p>Relato, valor, chave Pix e links do golpista organizados numa mensagem para encaminhar ao banco e anexar ao boletim de ocorrência.</p></div>
+        </div>
+        <div class="cpf-item">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22V4"/><path d="M4 4h12l-2 4 2 4H4"/></svg>
+          <div><h3>Seu caso protege os outros</h3><p>A chave Pix e o link do golpista entram na base de denúncias, e quem receber o mesmo golpe é avisado.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phone" aria-label="Exemplo de dossiê gerado pelo Fraus">
+      <div class="chat-head">
+        <div class="avatar"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6l8-3z"/></svg></div>
+        <div><div class="name">Fraus</div><div class="status">online</div></div>
+      </div>
+      <div class="chat">
+        <div class="bubble me" style="max-width:70%">Cliquei no link e fiz um Pix de R$ 1.800 😰</div>
+        <div class="bubble bot">
+          <span class="verdict v-mid">Caso #FR-101 aberto</span>
+          <ol class="signals">
+            <li>Ligue para o banco pelo app e peça o <strong>MED</strong></li>
+            <li>Peça o bloqueio cautelar e anote o protocolo</li>
+            <li>Registre o B.O. online</li>
+          </ol>
+          <span class="tip">Me conta o que aconteceu que eu monto o dossiê.</span>
+        </div>
+        <div class="bubble bot">
+          <span><strong>📁 Dossiê do caso #FR-101</strong></span>
+          <span class="tip">Tipo: Pix pago a golpista · Valor: R$ 1.800 · Chave Pix do golpista · Análise do Fraus antes do golpe · Passos recomendados</span>
+          <div class="qr" aria-hidden="true"><span>Encaminhar ao banco</span></div>
         </div>
       </div>
     </div>
@@ -509,6 +633,10 @@ footer{border-top:1px solid var(--line)}
     <div class="benefit">
       <h3>Explica o porquê</h3>
       <p>Além do alerta, mostra os sinais do golpe para você aprender a reconhecer da próxima vez.</p>
+    </div>
+    <div class="benefit">
+      <h3>Uma rede que aprende</h3>
+      <p>Cada golpe denunciado alerta quem receber o mesmo depois. Quanto mais gente usa, mais cedo o golpe é pego.</p>
     </div>
   </div>
 </section>
@@ -535,7 +663,7 @@ footer{border-top:1px solid var(--line)}
       <ul>
         <li>Canal de verificação para clientes desconfiados</li>
         <li>Menos chamados de atendimento sobre golpes</li>
-        <li>[OUTRO BENEFÍCIO PARA EMPRESAS]</li>
+        <li>Alertas de sites que usam a sua marca para aplicar golpes</li>
       </ul>
     </div>
   </div>
@@ -555,9 +683,10 @@ footer{border-top:1px solid var(--line)}
         <p class="price">[R$ 0] <small>/mês</small></p>
         <ul>
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>[Nº] verificações por mês</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Mensagens, links e prints</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Mensagens, links, prints e boletos</li>
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Explicação de cada alerta</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Verificação do seu CPF</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Checkup guiado do seu CPF</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Passo a passo e dossiê se você cair num golpe</li>
         </ul>
         <a href="#lista" class="btn btn-dark">Entrar na lista</a>
       </div>
@@ -568,8 +697,8 @@ footer{border-top:1px solid var(--line)}
         <ul>
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Verificações ilimitadas</li>
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Até [Nº] pessoas da família</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Análise de boletos e Pix</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Monitoramento do CPF de toda a família</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Consulta de CNPJ e chave Pix antes de pagar</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Checkup do CPF de toda a família</li>
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F4FD6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>[RECURSO EXTRA]</li>
         </ul>
         <a href="#lista" class="btn btn-dark">Quero o Família</a>
@@ -613,7 +742,7 @@ footer{border-top:1px solid var(--line)}
       </div>
       <button type="submit" class="btn btn-dark">Entrar na lista de espera</button>
       <p class="form-msg" id="form-msg" role="status" hidden></p>
-      <p class="form-note">Usamos seu contato só para avisar sobre o lançamento. [LINK DA POLÍTICA DE PRIVACIDADE]</p>
+      <p class="form-note">Usamos seu contato só para avisar sobre o lançamento. <a href="privacidade.html" style="color:#fff">Política de privacidade</a>.</p>
     </form>
   </div>
 </section>
@@ -634,12 +763,20 @@ footer{border-top:1px solid var(--line)}
     <p>O Fraus é uma segunda opinião, não uma garantia. Na dúvida, confirme por outro canal com a pessoa ou empresa antes de pagar.</p>
   </details>
   <details>
-    <summary>Como o Fraus verifica fraudes no meu CPF?<svg class="plus" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
-    <p>Com a sua autorização, o Fraus consulta [FONTES DE DADOS — ex.: birôs de crédito e bases parceiras] em busca de registros ligados ao seu CPF, como pedidos de crédito, contas abertas e cadastros. Se encontrar algo fora do comum, te avisa no WhatsApp.</p>
+    <summary>Como o Fraus sabe se um link é golpe?<svg class="plus" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+    <p>Ele consulta bases de sites maliciosos, como o Google Safe Browsing, o VirusTotal e o PhishTank, verifica há quanto tempo o site existe e se o endereço imita um banco, loja ou órgão do governo. Também confere se outros usuários já denunciaram o link. O site suspeito nunca é aberto.</p>
   </details>
   <details>
-    <summary>É seguro informar meu CPF ao Fraus?<svg class="plus" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
-    <p>Seu CPF é usado só para a verificação, com consentimento explícito e de acordo com a LGPD. O Fraus nunca pede senhas, códigos ou dados de cartão.</p>
+    <summary>E se eu já caí no golpe?<svg class="plus" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+    <p>Mande "caí num golpe" para o Fraus. Ele pergunta o que aconteceu, mostra os passos certos para o seu caso, como pedir o MED ao banco quando foi Pix, e monta um dossiê para levar ao banco e à delegacia.</p>
+  </details>
+  <details>
+    <summary>Como funciona o checkup do CPF?<svg class="plus" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+    <p>O Fraus te guia a consultar o Registrato, do Banco Central, e a Serasa, que são oficiais e gratuitos. Ele não pede nem guarda o seu CPF: você consulta e conta o que encontrou. Se algo não for seu, ele abre um caso e mostra como contestar. A cada 30 dias, ele te lembra de refazer.</p>
+  </details>
+  <details>
+    <summary>O Fraus pede meu CPF ou minhas senhas?<svg class="plus" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+    <p>Nunca. O Fraus não pede CPF, senha, código de verificação nem dados de cartão. Se alguém pedir isso em nome do Fraus, é golpe. O seu número de telefone é guardado de forma anônima. Veja a <a href="privacidade.html">política de privacidade</a>.</p>
   </details>
   <details>
     <summary>Posso usar para ajudar meus pais?<svg class="plus" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6FA0FF" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
@@ -666,7 +803,7 @@ footer{border-top:1px solid var(--line)}
     </ol>
   </div>
   <div class="wrap foot">
-    <span><strong>Fraus</strong> · Um projeto Girafas · Startup One FIAP</span>
+    <span><strong>Fraus</strong> · Um projeto Girafas · Startup One FIAP · <a href="privacidade.html">Política de privacidade</a></span>
     <span>[CONTATO@SEUDOMINIO.COM.BR]</span>
   </div>
 </footer>
@@ -696,9 +833,9 @@ const scenarios = {
     tip: 'Ligue para o número antigo da pessoa ou faça uma pergunta que só ela saberia responder. Não transfira nada antes disso.'
   },
   entrega: {
-    msg: 'Correios: sua encomenda está retida por falta de pagamento da taxa de R$ 4,90. Regularize em correios-entrega-rastreio.com até hoje.',
-    level: 'high', title: 'link falso de entrega',
-    signals: ['Link que imita site oficial, mas com endereço diferente', 'Cobrança de taxa inesperada', 'Prazo curto para pagar'],
+    msg: 'Correios: sua encomenda está retida por falta de pagamento da taxa de R$ 4,90. Regularize em correios-rastreio-entrega.online até hoje.',
+    level: 'high', title: 'golpe da falsa entrega',
+    signals: ['O link usa o nome Correios, mas não é o site oficial', 'Termina em ".online", extensão muito usada em golpes', 'Cobrança de taxa inesperada com prazo curto'],
     tip: 'Não clique no link. Consulte o rastreio digitando o endereço oficial no navegador ou pelo app da transportadora.'
   },
   banco: {
@@ -715,23 +852,46 @@ const scenarios = {
   },
   vaga: {
     msg: 'Olá! Vaga de home office: ganhe de R$ 200 a R$ 800 por dia curtindo vídeos. Para começar, faça um depósito inicial de R$ 50.',
-    level: 'mid', title: 'possível golpe de vaga falsa',
-    signals: ['Ganho fácil e alto demais', 'Pede pagamento para começar a trabalhar'],
+    level: 'high', title: 'golpe da renda fácil',
+    signals: ['Promete dinheiro fácil', 'Pede depósito para começar a trabalhar'],
     tip: 'Empresas sérias não cobram para contratar. Pesquise o nome da empresa e desconfie de pagamento antecipado.'
   },
-  cpf: {
-    msg: 'Fraus, quero verificar meu CPF: ***.456.789-**',
+  boleto: {
+    msg: 'Paga esse boleto da escola pra mim? 34191.09230 45078.101234 45678.901237 2 16310000025000',
+    level: 'high', title: 'boleto adulterado',
+    signals: ['Os dígitos verificadores não batem: o código foi alterado ou digitado errado', 'Emitido por Itaú Unibanco · R$ 250,00 · vence 15/11/2026'],
+    tip: 'Não pague. Peça o boleto direto no site ou app de quem cobrou e confira o beneficiário no app do banco antes de confirmar.'
+  },
+  cnpj: {
+    msg: 'A loja do Instagram pediu Pix no CNPJ 11.222.333/0001-82. É confiável?',
     forwarded: false,
-    level: 'high', label: '2 alertas no seu CPF',
-    intro: 'Verifiquei seu CPF e encontrei 2 registros que merecem atenção (dados de exemplo):',
-    signals: ['Pedido de empréstimo há 3 dias', 'Abertura de conta digital ontem'],
-    tip: 'Você reconhece esses registros? Se não foi você, eu te guio para contestar, registrar ocorrência e proteger seus dados.'
+    level: 'high', title: 'loja com CNPJ falso',
+    signals: ['CNPJ com dígitos inválidos: não existe na Receita Federal', 'Pagamento via Pix para loja de rede social'],
+    tip: 'Não faça o Pix. Antes de comprar de uma loja nova, confira o CNPJ: empresa inexistente, inativa ou aberta há poucos meses é sinal de alerta.'
+  },
+  golpe: {
+    msg: 'Cliquei no link e fiz um Pix de R$ 1.800 😰',
+    forwarded: false, ordered: true,
+    level: 'mid', label: 'Caso #FR-101 aberto',
+    intro: 'Calma, dá para agir. Faça nesta ordem:',
+    signals: ['Ligue para o banco pelo app ou pelo verso do cartão e peça o MED (Mecanismo Especial de Devolução do Pix)', 'Peça o bloqueio cautelar e anote o protocolo', 'Registre o boletim de ocorrência online', 'Guarde comprovante, prints e a chave Pix do golpista'],
+    tip: 'Me conta o que aconteceu, o valor e a chave Pix que eu monto o dossiê para o banco e a delegacia.',
+    buttons: ['📁 Ver dossiê', '🏠 Menu']
+  },
+  cpf: {
+    msg: 'cpf',
+    forwarded: false, ordered: true,
+    level: 'low', label: 'Checkup gratuito do CPF',
+    intro: 'Eu não peço seu CPF. Consulte nos sites oficiais e me conta o que achou:',
+    signals: ['Registrato (Banco Central): empréstimos, contas e chaves Pix no seu nome', 'Serasa: dívidas que você não reconhece'],
+    tip: 'Se achar algo estranho, eu abro um caso e te guio para contestar. Daqui a 30 dias eu te lembro de refazer.',
+    buttons: ['✅ Reconheço tudo', '⚠️ Achei algo errado']
   },
   normal: {
     msg: 'Oi! O almoço de domingo vai ser na casa da vó, às 13h. Você leva a sobremesa?',
     level: 'low', title: null,
     signals: [],
-    tip: 'Não encontrei sinais de golpe nessa mensagem. Pode responder tranquilo — e conte com o Fraus sempre que algo parecer estranho.'
+    tip: 'Não encontrei sinais claros de golpe nessa mensagem. Mesmo assim, desconfie de qualquer pedido de dinheiro, senha ou código.'
   }
 };
 
@@ -749,16 +909,19 @@ const rules = [
 ];
 
 function analyze(text){
+  if (/cliquei|fiz (um |o )?pix|ca[ií] (no|num|em um) golpe|passei (a |minha )?senha|fui v[ií]tima/i.test(text) && !/n[aã]o (cliquei|fiz|ca[ií]|passei)/i.test(text)) return {...scenarios.golpe, forwarded:false};
   const signals = rules.filter(([re]) => re.test(text)).map(([, label]) => label);
-  if (signals.length >= 2) return {level:'high', title:'mensagem com padrão de golpe', signals,
+  if (/(itau|bradesco|santander|caixa|nubank|correios|mercado ?livre|banco ?do ?brasil|gov)[\w-]*\.(online|xyz|top|site|shop|click|info|com)\b/i.test(text.replace(/\s/g,' ')) && !/(itau\.com\.br|bradesco\.com\.br|santander\.com\.br|caixa\.gov\.br|nubank\.com\.br|correios\.com\.br|mercadolivre\.com\.br|bb\.com\.br|\.gov\.br)/i.test(text)) signals.unshift('Link usa o nome de uma marca conhecida, mas não é o site oficial');
+  if (signals.length >= 2) return {level:'high', title:'golpe', signals,
     tip:'Não pague, não clique e não passe dados. Confirme por outro canal oficial antes de qualquer coisa.'};
-  if (signals.length === 1) return {level:'mid', title:'mensagem que merece atenção', signals,
+  if (signals.length === 1) return {level:'mid', title:null, intro:'Encontrei um sinal de alerta nessa mensagem:', signals,
     tip:'Encontrei um sinal de alerta. Se envolver dinheiro ou dados, confirme com a pessoa ou empresa por outro canal.'};
   return {level:'low', title:null, signals:[],
     tip:'Não encontrei sinais claros de golpe nessa mensagem. Mesmo assim, desconfie de qualquer pedido de dinheiro ou dados.'};
 }
 
-const labels = {high:['v-high','Alto risco de golpe'], mid:['v-mid','Atenção: suspeito'], low:['v-low','Sem sinais de golpe']};
+const labels = {high:['v-high','Alto risco de golpe'], mid:['v-mid','Atenção: suspeito'], low:['v-low','Sem sinais claros de golpe']};
+const BOTOES_ANALISE = ['🚩 Denunciar', '😰 Já paguei', '🏠 Menu'];
 
 function el(tag, cls, text){ const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; }
 function scrollChat(){ chat.scrollTop = chat.scrollHeight; }
@@ -791,9 +954,12 @@ async function run(text, result){
     bot.append(p);
   }
   if (result.signals.length){
-    const ul = el('ul','signals'); result.signals.forEach(s => ul.append(el('li', null, s))); bot.append(ul);
+    const ul = el(result.ordered ? 'ol' : 'ul','signals'); result.signals.forEach(s => ul.append(el('li', null, s))); bot.append(ul);
   }
   bot.append(el('span','tip', result.tip));
+  const qr = el('div','qr'); qr.setAttribute('aria-hidden','true');
+  (result.buttons || BOTOES_ANALISE).forEach(b => qr.append(el('span', null, b)));
+  bot.append(qr);
   chat.append(bot); scrollChat();
   busy = false;
 }
